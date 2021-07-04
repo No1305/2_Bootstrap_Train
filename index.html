@@ -10,9 +10,34 @@
     <title>Bootstrap tutorial</title>
 </head>
 <body>
-    <header>Phần Header của trang web</header>
-    <main>Phần nội dung</main>
-    <footer>Phần cuối trang</footer>
+    <header>
+        <div class="container">
+            <div class="row">Header</div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <!-- <div class="row ">
+                <div class="col-sm-8">Phan giua noi dung</div>
+                <div class="col-sm-3 offset-sm-1">Phia phai noi dung</div>
+            </div> -->
+
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="row">
+                        <div class="col-sm-12">Main top</div>
+                        <div class="col-sm-12">Main content</div>
+                    </div>
+                </div>
+                <div class="col-sm-3">Promotion</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">Footer</div>
+        </div>
+    </footer>
 
     <!-- Liên kết tới thư viện JS trong Jquery, Popper.js, Bootstrap -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
