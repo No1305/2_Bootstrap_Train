@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Liên kết tới thư viện CSS trong Bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Bootstrap tutorial</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">Header</div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <!-- <div class="row ">
+                <div class="col-sm-8">Phan giua noi dung</div>
+                <div class="col-sm-3 offset-sm-1">Phia phai noi dung</div>
+            </div> -->
+
+            <div class="row align-items-center">
+                <div class="col-12 order-last col-sm-9 order-sm-last col-md-6 order-md-first">
+                    <div class="row">
+                        <div class="col-sm-12">Main top</div>
+                        <div class="col-sm-12">Main content</div>
+                    </div>
+                </div>
+                <div class="col-12 order-first col-sm-3 order-sm-first col-md-6 order-md-last">Promotion</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">Footer</div>
+        </div>
+    </footer>
+
+    <!-- Liên kết tới thư viện JS trong Jquery, Popper.js, Bootstrap -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

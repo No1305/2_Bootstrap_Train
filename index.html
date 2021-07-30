@@ -1,47 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Liên kết tới thư viện CSS trong Bootstrap -->
+    <title>Ristorante Con Fusion</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <title>Bootstrap tutorial</title>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="row">Header</div>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <!-- <div class="row ">
-                <div class="col-sm-8">Phan giua noi dung</div>
-                <div class="col-sm-3 offset-sm-1">Phia phai noi dung</div>
-            </div> -->
 
-            <div class="row align-items-center">
-                <div class="col-12 order-last col-sm-9 order-sm-last col-md-6 order-md-first">
-                    <div class="row">
-                        <div class="col-sm-12">Main top</div>
-                        <div class="col-sm-12">Main content</div>
-                    </div>
-                </div>
-                <div class="col-12 order-first col-sm-3 order-sm-first col-md-6 order-md-last">Promotion</div>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="index.html" ><img src="img/logo.png" height="30" width="41"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home"> Home</i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="./2_1_assignment_aboutus.html"><span class="fa fa-info-circle"> About Us</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list"> Menu</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-address-card"> Contact</span></a></li>
+                </ul>
             </div>
         </div>
-    </main>
-    <footer>
+    </nav>
+    <header class="jumbotron">
         <div class="container">
-            <div class="row">Footer</div>
+            <div class="row row-header justify-content-center">
+                <div class="col-12 col-sm-6">
+                    <h1>Ristorante con Fusion</h1>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                    <img src="img/logo.png" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                    <a href="#reserve-table" class="btn btn-warning form-control">Reserve Table</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
+                <h3>Our Lipsmacking Culinary Creations</h3>
+            </div>
+            <div class="col col-sm order-sm-first col-md">
+                <div class="media">
+                    <img src="img/uthappizza.png" class="d-flex mr-3 img-thumbnail align-self-center">
+                    <div class="media-body">
+                        <h2 class="mt-0 media-heading">
+                            Uthappizza
+                            <span class="badge badge-danger">HOT</span>
+                            <span class="badge badge-pill badge-secondary">$4.99</span>
+                        </h2>
+                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 col-md-3">
+                <h3>This Month's Promotions</h3>
+            </div>
+            <div class="col col-sm col-md">
+                <div class="media">
+                    <div class="media-body">
+                        <h2 class="mt-0 media-heading">
+                            Weekend Grand Buffet
+                            <span class="badge badge-danger">NEW</span>
+                        </h2>
+                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                    </div>
+                    <img src="img/buffet.png" class="img-thumbnail d-flex ml-3 align-self-center">
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center">
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
+                <h3>Meet our Culinary Specialists</h3>
+            </div>
+            <div class="col col-sm order-sm-first col-md">
+                <div class="media">
+                    <img src="img/alberto.png" class="d-flex mr-3 img-thumbnail align-self-center">
+                    <div class="media-body">
+                        <h2 class="mt-0">Alberto Somayya</h2>
+                        <h4>Executive Chef</h4>
+                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center" id="reserve-table">
+            <div class="col-12 col-sm-12">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">
+                        <h3>Reserve a Table</h3>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group row">
+                                <label class="col-12 col-md-2">Number of Guests</label>
+                                <div class="col col-md-6">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
+                                        <label class="form-check-label">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
+                                        <label class="form-check-label">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
+                                        <label class="form-check-label">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
+                                        <label class="form-check-label">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
+                                        <label class="form-check-label">5</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
+                                        <label class="form-check-label">6</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-12 col-md-2">Date and Time</label>
+                                <div class="col-12 col-md-4">
+                                    <input type="date" name="txtDate" id="txtDate" class="form-control" placeholder="Date">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <input type="time" name="txtTime" id="txtTime" class="form-control" placeholder="Time">
+                                </div>
+                                <div class="col-md offset-2"></div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-12 d-none d-md-block col-md-2"></label>
+                                <div class="col-12 col-md-8">
+                                    <button class="btn btn-primary">Reserve</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our address</h5>
+                    <address>
+                        Khu Giáo dục và Đào tạo – Khu Công nghệ cao Hòa Lạc – Km29 Đại lộ Thăng Long, H. Thạch Thất, TP. Hà Nội <br>
+                        <i class="fa fa-phone fa-lg"></i>: 024 7300 1866 <br>
+                        <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:daihocfpt@fpt.edu.vn">daihocfpt@fpt.edu.vn</a>
+                    </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://"><i class="fa fa-google-plus fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://"><i class="fa fa-facebook fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://"><i class="fa fa-youtube fa-lg"></i></a>
+                        <a class="btn btn-social-icon" href="http://"><i class="fa fa-envelope fa-lg"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">
+            <div class="col-auto">
+                <p>@ Copyright @2021 - FPTU</p>
+            </div>
+        </div>
         </div>
     </footer>
 
-    <!-- Liên kết tới thư viện JS trong Jquery, Popper.js, Bootstrap -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
