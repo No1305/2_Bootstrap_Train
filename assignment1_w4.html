@@ -28,11 +28,7 @@
                 </ul>
             </div>
             <span class="navbar-text">
-                <a data-toggle="tooltip" data-html="true" data-placement="bottom" title="<ul><li>item 1<li><li>item 2<li></ul>">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                </a>
-                &nbsp;&nbsp;
-                <a data-toggle="modal" data-target="#loginModal">
+                <a id="loginClick">
                     <span class="fa fa-sign-in"></span> Login
                 </a>
             </span>
@@ -85,9 +81,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a href="#reserve-table" class="btn btn-warning form-control" data-toggle="tooltip" data-html="true"
-                        title="Or Call us at <br><strong>+84 123456</strong>"
-                        data-placement="top">
+                    <a id="reserveClick" href="#reserve-table" class="btn btn-warning form-control">
                         Reserve Table
                     </a>
                 </div>
@@ -95,13 +89,85 @@
         </div>
     </header>
 
+    <div id="reserve-modal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-12 col-md-2">Number of Guests</label>
+                            <div class="col col-md-6">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
+                                    <label class="form-check-label">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
+                                    <label class="form-check-label">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
+                                    <label class="form-check-label">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
+                                    <label class="form-check-label">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
+                                    <label class="form-check-label">5</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
+                                    <label class="form-check-label">6</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-12 col-md-2">Section</label>
+                            <div class="btn-group col-12 col-md-4" role="group">
+                                <a href="" class="btn btn-success">Non-Smoking</a>
+                                <a href="" class="btn btn-danger">Smoking</a>
+                            </div>
+                            <div class="col-md-auto"></div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-12 col-md-2">Date and Time</label>
+                            <div class="col-12 col-md-3">
+                                <input type="date" name="txtDate" id="txtDate" class="form-control" placeholder="Date">
+                            </div>
+                            <div class="col-12 col-md-3">
+                                <input type="time" name="txtTime" id="txtTime" class="form-control" placeholder="Time">
+                            </div>
+                            <div class="col-md-auto"></div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label class="col-12 d-none d-md-block col-md-2"></label>
+                            <div class="col-12 col-md-8">
+                                <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button class="btn btn-primary">Reserve</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
 
         <div class="row row-content">
             <div class="col">
                 <div id="slideshow" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active" data-interval="2000">
+                        <div class="carousel-item active">
                             <a href="#"><img class="d-block img-fluid" src="img/uthappizza.png" alt="uthapizza"></a>
                             <div class="carousel-caption d-none d-md-block">
                                 <h2 class="mt-0">
@@ -112,7 +178,7 @@
                                 <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                             </div>
                         </div>
-                        <div class="carousel-item" data-interval="2000">
+                        <div class="carousel-item">
                             <img class="d-block img-fluid" src="img/buffet.png" alt="buffet">
                             <div class="carousel-caption d-none d-md-block">
                                 <h2 class="mt-0">
@@ -122,7 +188,7 @@
                                 <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person</p>
                             </div>
                         </div>
-                        <div class="carousel-item" data-interval="2000">
+                        <div class="carousel-item">
                             <img class="d-block img-fluid" src="img/alberto.png" alt="alberto">
                             <div class="carousel-caption d-none d-md-block">
                                 <h2 class="mt-0">
@@ -144,6 +210,9 @@
                     <a class="carousel-control-next" href="#slideshow" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span class="fa fa-pause"></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -199,65 +268,6 @@
             </div>
         </div>
 
-        <div class="row row-content align-items-center" id="reserve-table">
-            <div class="col-12 col-sm-12">
-                <div class="card">
-                    <div class="card-header bg-warning text-white">
-                        <h3>Reserve a Table</h3>
-                    </div>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group row">
-                                <label class="col-12 col-md-2">Number of Guests</label>
-                                <div class="col col-md-6">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
-                                        <label class="form-check-label">1</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
-                                        <label class="form-check-label">2</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
-                                        <label class="form-check-label">3</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
-                                        <label class="form-check-label">4</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
-                                        <label class="form-check-label">5</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="chkNumber" id="chkNumber">
-                                        <label class="form-check-label">6</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-12 col-md-2">Date and Time</label>
-                                <div class="col-12 col-md-4">
-                                    <input type="date" name="txtDate" id="txtDate" class="form-control" placeholder="Date">
-                                </div>
-                                <div class="col-12 col-md-4">
-                                    <input type="time" name="txtTime" id="txtTime" class="form-control" placeholder="Time">
-                                </div>
-                                <div class="col-md offset-2"></div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-12 d-none d-md-block col-md-2"></label>
-                                <div class="col-12 col-md-8">
-                                    <button class="btn btn-primary">Reserve</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <footer class="footer">
@@ -303,9 +313,32 @@
 
     <script>
         $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
+            $('#slideshow').carousel({interval:2000});
+            
+            $('#carouselButton').click(function(){
+                if($('#carouselButton').children('span').hasClass('fa-pause')){
+                    $('#slideshow').carousel('pause');
+                    $('#carouselButton').children('span').removeClass('fa-pause');
+                    $('#carouselButton').children('span').addClass('fa-play');
+                }else if($('#carouselButton').children('span').hasClass('fa-play')){
+                    $('#slideshow').carousel('cycle');
+                    $('#carouselButton').children('span').removeClass('fa-play');
+                    $('#carouselButton').children('span').addClass('fa-pause');
+                }
+            });
+            
+            // when click login link
+            $('#loginClick').click(function(){
+                // show login modal
+                $('#loginModal').modal();
+            });
 
-            //$('.carousel').carousel({interval:2000});
+            // when click reserve-table link
+            $('#reserveClick').click(function(){
+                // show reserve table
+                $('#reserve-modal').modal();
+            });
+
         });
     </script>
 </body>

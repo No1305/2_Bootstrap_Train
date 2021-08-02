@@ -144,6 +144,9 @@
                     <a class="carousel-control-next" href="#slideshow" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span class="fa fa-pause"></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -303,9 +306,23 @@
 
     <script>
         $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
+            $('#slideshow').carousel({interval:2000});
+            
+            $('#carouselButton').click(function(){
+                if($('#carouselButton').children('span').hasClass('fa-pause')){
+                    $('#slideshow').carousel('pause');
+                    $('#carouselButton').children('span').removeClass('fa-pause');
+                    $('#carouselButton').children('span').addClass('fa-play');
+                }else if($('#carouselButton').children('span').hasClass('fa-play')){
+                    $('#slideshow').carousel('cycle');
+                    $('#carouselButton').children('span').removeClass('fa-play');
+                    $('#carouselButton').children('span').addClass('fa-pause');
+                }
+            });
 
-            //$('.carousel').carousel({interval:2000});
+            // $('#carousel-play').click(function(){
+            //     $('#slideshow').carousel('cycle');
+            // });
         });
     </script>
 </body>
